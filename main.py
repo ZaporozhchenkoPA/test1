@@ -7,8 +7,9 @@ def get_valutes_list():
     url = 'https://www.cbr-xml-daily.ru/daily_json.js'
     response = requests.get(url)
     data = json.loads(response.text)
-    valutes = list(data['Valute'].values())
-    return valutes
+    valutes =  list(data['Valute'].values())
+#
+    return  valutes
 
 
 app = Flask(__name__)
